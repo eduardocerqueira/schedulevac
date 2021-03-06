@@ -2,7 +2,7 @@ import json
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from pydub import AudioSegment
 from pydub.playback import play
@@ -18,7 +18,55 @@ found = False
 
 
 def main():
-    single_browser()
+    route_hawaii()
+
+
+@retry(wait_fixed=10000)
+def route_hawaii():
+    now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    print(now)
+    driver = webdriver.Chrome("./chromedriver", options=chrome_options)
+    driver.set_page_load_timeout(10800)  # 3hs
+    driver.set_script_timeout(10800)  # 3hs
+    driver.get(url)
+
+    with open("route_hawaii.json") as route:
+        data = json.load(route)
+
+    for step in data:
+        print(f"element: {step['desc']}")
+
+        try:
+            elm = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable(
+                    (
+                        By.XPATH,
+                        step["element"],
+                    )
+                )
+            )
+
+        except Exception as ex:
+            # due high traffic, expecting error msg: We can't continue due to a technical glitch.
+            # if works, wake me up!
+            if step["desc"] == "error":
+                play_alarm()
+
+        if step["type"] == "nav":
+            elm.click()
+
+        if step["type"] == "select":
+            dp = Select(driver.find_element_by_xpath(step["element"]))
+            if "value" in step:
+                dp.select_by_visible_text(step["value"])
+            else:
+                dp.select_by_index(step["index"])
+
+        if step["type"] == "input":
+            elm.send_keys(step["value"])
+
+    driver.close()
+    raise Exception("it is time for a rest, giving up for today!")
 
 
 def play_alarm():
@@ -31,9 +79,8 @@ def play_alarm():
             break
 
 
-# min=1m max=5m attempt=10hs
-@retry(wait_random_min=60000, wait_random_max=300000, stop_max_attempt_number=36000)
-def single_browser():
+@retry(wait_fixed=10000)
+def route_ma():
     now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     print(now)
     driver = webdriver.Chrome("./chromedriver", options=chrome_options)

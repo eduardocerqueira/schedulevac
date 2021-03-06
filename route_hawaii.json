@@ -1,0 +1,107 @@
+[
+    {
+        "type": "nav",
+        "element": "//*/div/div[2]/div/div/div/div/div[1]/ul/li[10]/div/a/span",
+        "desc": "hawaii"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/div[2]/div/div[16]/div/div/div/div/div/div[1]/div[2]/div/div/div[2]/div/div[3]/div/p[2]/a/strong",
+        "desc": "schedule now"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-covid-questionnaire/main/div[2]/div/cvs-questionnaire/form/fieldset/section/div[3]/fieldset/div[2]/div[2]/label",
+        "desc": "Q1"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-covid-questionnaire/main/div[2]/div/cvs-questionnaire/form/fieldset/section/div[4]/fieldset/div[2]/div[2]/label",
+        "desc": "Q2"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-covid-questionnaire/main/div[2]/div/cvs-questionnaire/form/fieldset/section/div[5]/fieldset/div[2]/div[2]/label",
+        "desc": "Q3"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-covid-questionnaire/main/div[3]/button",
+        "desc": "continue"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-covid-dose-selection/main/div[2]/form/section/div[2]/div/div/div[1]/label",
+        "desc": "what do you need"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-covid-dose-selection/main/div[3]/button",
+        "desc": "continue"
+    },
+    {
+        "type": "select",
+        "element": "/html/body/cvs-root/div/cvs-eligibility-covid/main/div[2]/form/section/div/div/select",
+        "value": "Massachusetts",
+        "desc": "location = MA"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-eligibility-covid/main/div[3]/button",
+        "desc": "continue scheduling"
+    },
+    {
+        "type": "input",
+        "element": "/html/body/cvs-root/div/cvs-eligibility-questionnaire/main/div[2]/form/fieldset/section/div[1]/div/input",
+        "value": "40",
+        "desc": "age"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-eligibility-questionnaire/main/div[2]/form/fieldset/section/div[2]/div/div/div[1]/label",
+        "desc": "priority group"
+    },
+    {
+        "type": "select",
+        "element": "/html/body/cvs-root/div/cvs-eligibility-questionnaire/main/div[2]/form/fieldset/section/div[3]/div/div/select",
+        "index": "2",
+        "desc": "Teachers K-12, Daycare and preschool workers, and staff members"
+    },
+    {
+        "type": "input",
+        "element": "/html/body/cvs-root/div/cvs-eligibility-questionnaire/main/div[2]/form/fieldset/section/div[4]/input",
+        "value": "Lowell Public Schools",
+        "desc": "Lowell Public Schools"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-eligibility-questionnaire/main/div[2]/form/fieldset/section/div[5]",
+        "desc": "qconsent"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-eligibility-questionnaire/main/div[3]/button",
+        "desc": "confirm elegibility"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-cvd-how-to-schedule/main/div[3]/button",
+        "desc": "start scheduling"
+    },
+    {
+        "type": "input",
+        "element": "/html/body/cvs-root/div/cvs-cvd-first-dose-select/main/div[2]/cvs-store-locator/div/section/form/div/div/div[1]/input",
+        "value": "01450",
+        "desc": "zip code"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-cvd-first-dose-select/main/div[2]/cvs-store-locator/div/section/form/div/div/div[1]/button/img",
+        "desc": "search"
+    },
+    {
+        "type": "nav",
+        "element": "/html/body/cvs-root/div/cvs-error-page/main/div/cvs-banner/div/div[1]",
+        "desc": "error"
+    }
+]
