@@ -23,3 +23,7 @@ run:
 ```
 python schedule.py
 ```
+
+demo:
+
+![video](./media/video_gif.gif)
