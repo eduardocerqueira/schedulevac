@@ -1,4 +1,6 @@
-# AUTO SCHEDULE
+# FIND SPOT
+
+find available spot on schedule a service
 
 pre-requisites:
 * python3
